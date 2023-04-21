@@ -1,8 +1,9 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log("✅✅✅ Assertion Passed: " + actual + " === " + expected);
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    // added in template literals instead of concatenated string
   } else if (actual !== expected) {
-    console.log("❗️❗️❗️ Assertion Failed: " + actual + " !== " + expected);
+    console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
@@ -12,10 +13,10 @@ assertEqual(1, 1);
 
 /* \
 input
-[] take two values
+[x] take two values
 
 output
-[] print out if they or not
+[x] print out if they or not
 
 Process / Rules
 - values should match and print (console.log) Assertion Passed:
@@ -28,8 +29,8 @@ Process / Rules
 
 /*
 Test
-[] Compares indentical string
-[] Compares non-indentical string
-[] Compares indentical numbers
-[] Compares non-indentical numbers
+[x] Compares indentical string
+[x] Compares non-indentical string
+[x] Compares indentical numbers
+[x] Compares non-indentical numbers
 */
