@@ -7,9 +7,9 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Test Code
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+// // Test Code
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
 
 /* \
 input
@@ -34,3 +34,4 @@ Test
 [x] Compares indentical numbers
 [x] Compares non-indentical numbers
 */
+module.exports = assertEqual;
