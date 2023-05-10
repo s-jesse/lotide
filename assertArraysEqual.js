@@ -1,16 +1,18 @@
- const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
+const eqArrays = require('./eqArrays')
 
-  for ( let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
+//  const eqArrays = function(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
 
-  }
-  return true;
-};
+//   for ( let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       return false;
+//     }
+
+//   }
+//   return true;
+// };
 // PROCESS
 //needed to embed previous eqArrays function 
 // created assertArrayEqual functin that takes in two arrays
@@ -26,10 +28,10 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-// test calling the assertArraysEqual function and puttin in the assertion parameters
+// // test calling the assertArraysEqual function and puttin in the assertion parameters
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // should pass
-assertArraysEqual([1, 1, 3], [1, 2, 3]); //  should fail
+// assertArraysEqual([1, 2, 3], [1, 2, 3]); // should pass
+// assertArraysEqual([1, 1, 3], [1, 2, 3]); //  should fail
 
 /*
 const assertEqual = function(actual, expected) {
@@ -39,3 +41,4 @@ const assertEqual = function(actual, expected) {
     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
   }
 }; */
+module.exports = assertArraysEqual;
