@@ -1,10 +1,12 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual')
+
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//   } else if (actual !== expected) {
+//     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const tail = function(arrTail) {
   //console.log(arr);
@@ -14,10 +16,10 @@ const tail = function(arrTail) {
 };
 //tail([1, 2, 3]);
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+// const result = tail(["Hello", "Lighthouse", "Labs"]);
+// assertEqual(result.length, 2); // ensure we get back two elements
+// assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
+// assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 /*
 Array test
 const words = ["Yo Yo", "Lighthouse", "Labs"];
@@ -41,3 +43,4 @@ Output
 [x] function returns first element sliced from array
 [x] array still intact
 */
+module.exports = tail;
