@@ -1,10 +1,11 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual')
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//   } else if (actual !== expected) {
+//     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
@@ -36,19 +37,19 @@ console.log(checker);
   }
   */
 
-// test with assertion function
+// // test with assertion function
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 2, 3], [1, 2, 4]), true); 
-assertEqual(eqArrays([1, "2", 3], [1, 2, 3]), true); 
-assertEqual(eqArrays([1, 5, 3], [1, 5, 3]), true); 
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 4]), true); 
+// assertEqual(eqArrays([1, "2", 3], [1, 2, 3]), true); 
+// assertEqual(eqArrays([1, 5, 3], [1, 5, 3]), true); 
 
 
-// test eqArrays function
-console.log((eqArrays([1, 2, 3], [1, 2, 3]))); // => true
-console.log((eqArrays([1, 2, 3], [3, 2, 1]))); // => false
-console.log((eqArrays(["1", "2", "3"], ["1", "2", "3"]))); // => true
-console.log((eqArrays(["1", "2", "3"], ["1", "2", 3]))); // => false
+// // test eqArrays function
+// console.log((eqArrays([1, 2, 3], [1, 2, 3]))); // => true
+// console.log((eqArrays([1, 2, 3], [3, 2, 1]))); // => false
+// console.log((eqArrays(["1", "2", "3"], ["1", "2", "3"]))); // => true
+// console.log((eqArrays(["1", "2", "3"], ["1", "2", 3]))); // => false
 
 /*
 Rule
@@ -66,3 +67,4 @@ Process
 - within function, should use comparative operator to return boolean value
 - 
 */
+module.exports = eqArrays;
