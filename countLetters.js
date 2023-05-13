@@ -34,4 +34,5 @@ const countLetters = function(sentence) {
 // need to return values in object where property is each letter
 // each property will then display number count of letter iterations as value
 //console.log("hello func", countLetters("hello"));
-console.log(countLetters("lighthouse in the house"));
+//console.log(countLetters("lighthouse in the house"));
+module.exports = countLetters;
