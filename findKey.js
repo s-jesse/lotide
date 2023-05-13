@@ -1,11 +1,13 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    // added in template literals instead of concatenated string
-  } else if (actual !== expected) {
-    console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
+
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//     // added in template literals instead of concatenated string
+//   } else if (actual !== expected) {
+//     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const findKey = function(object, callback) {
   // const keyList = Object.keys(object);
@@ -47,21 +49,23 @@ const findKey = function(object, callback) {
 // for (let key of keyList) {
 //   console.log("key loop", key);
 
-//Output Example
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2), "noma"); // => "noma"
+// //Output Example
+// assertEqual(findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 2), "noma"); // => "noma"
 
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2), "Blue Hill"); // => "noma"
+// assertEqual(findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 2), "Blue Hill"); // => "noma"
+
+module.exports = findKey
