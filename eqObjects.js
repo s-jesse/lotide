@@ -1,3 +1,5 @@
+//const assertEqual = require('../assertEqual.js');
+
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -61,9 +63,10 @@ const eqObjects = function(object1, object2) {
 //const longSleeveShirtObject= { size: "medium", color: "red", sleeveLength: "long" };
 //eqObjects(shirtObject , longSleeveShirtObject); // => false
 // assertEqual(eqObjects(shirtObject , longSleeveShirtObject), false);
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true); // => true
+// const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
+// const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
+// assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true); // => true
 
-const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false); // => false
+// const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
+// assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false); // => false
+module.exports = eqObjects;
