@@ -1,11 +1,13 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    // added in template literals instead of concatenated string
-  } else if (actual !== expected) {
-    console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+//const assertEqual = require('./assertEqual')
+
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//     // added in template literals instead of concatenated string
+//   } else if (actual !== expected) {
+//     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 // allItems: an array of strings that we need to look through
 // itemstoCount: an object specifying what to count
@@ -32,26 +34,28 @@ if (itemsToCount[item]) {
 };
 
 // variable to store an array - with test keys? 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
+// const firstNames = [
+//   "Karl",
+//   "Salima",
+//   "Agouhanna",
+//   "Fang",
+//   "Kavith",
+//   "Jason",
+//   "Salima",
+//   "Fang",
+//   "Joe"
+// ];
 
-// test variable to store function with above array var for paramter 1 for and properties in argument 2 
-const result1 = countOnly(firstNames, {"Jason": true, "Karima": true, "Fang": true, "Agouhanna": false});
+// // test variable to store function with above array var for paramter 1 for and properties in argument 2 
+// const result1 = countOnly(firstNames, {"Jason": true, "Karima": true, "Fang": true, "Agouhanna": false});
 // result1 is undefined and we cannot access a propery on undefined as thought it were an object
 // fix error by having our function define a new empy object results and return it.
 
 
-// initial test code using assertEqual function adding...?
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+// // initial test code using assertEqual function adding...?
+// assertEqual(result1["Jason"], 1);
+// assertEqual(result1["Karima"], undefined);
+// assertEqual(result1["Fang"], 2);
+// assertEqual(result1["Agouhanna"], undefined);
+
+module.exports = countOnly;
