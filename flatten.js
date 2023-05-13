@@ -1,24 +1,29 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
 
-  }
-  return true;
-};
 
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2) === true) {
-    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
-  } else if (array1 !== array2) {
-    console.log(`❗️❗️❗️ Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
+// const eqArrays = function(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
+
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       return false;
+//     }
+
+//   }
+//   return true;
+// };
+
+// const assertArraysEqual = function(array1, array2) {
+//   if (eqArrays(array1, array2) === true) {
+//     console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
+//   } else if (array1 !== array2) {
+//     console.log(`❗️❗️❗️ Assertion Failed: ${array1} !== ${array2}`);
+//   }
+// };
 
 const flatten = function(arr) {
 // created flatten function to take a array paremter
@@ -49,6 +54,8 @@ const flatten = function(arr) {
 // second loop more like child running alongside
 
 // test
-flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
-// assertion test using input with flatten function and comparing to output needed
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]),[1, 2, 3, 4, 5, 6]);
+// flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
+// // assertion test using input with flatten function and comparing to output needed
+// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]),[1, 2, 3, 4, 5, 6]);
+
+module.exports = flatten
