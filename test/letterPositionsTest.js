@@ -1,10 +1,11 @@
 const letterPositions = require('../letterPositions');
 const assertArraysEqual = require('../assertArraysEqual');
 
+// Function Test showing return
 console.log(letterPositions("lighthouse in the house"));
 
-// Testing
-assertArraysEqual(letterPositions("hello").h, [0]);
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2]);
-assertArraysEqual(letterPositions("hello").o, [4]);
+// Assertion Test
+assertArraysEqual(letterPositions("hello").h, [0]); // should pass
+assertArraysEqual(letterPositions("hello").e, [1]); // should pass
+assertArraysEqual(letterPositions("hello").l, [2]); // should fail
+assertArraysEqual(letterPositions("hello").o, [4]); // should pass
