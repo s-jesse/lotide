@@ -1,33 +1,3 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
-// const eqArrays = function(arr1, arr2) {
-//   if (arr1.length !== arr2.length) {
-//     return false;
-//   }
-
-//   for ( let i = 0; i < arr1.length; i++) {
-//     if (arr1[i] !== arr2[i]) {
-//       return false;
-//     }
-
-//   }
-//   return true;
-// };
-
-// const assertArraysEqual = function(array1, array2) {
-//   if (eqArrays(array1, array2) === true) {
-//     console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
-//   } else if (array1 !== array2) {
-//     console.log(`❗️❗️❗️ Assertion Failed: ${array1} !== ${array2}`);
-//   }
-// };
-// input within function needs to take source parameter and remove elements based on itemsToRemove parameter
-
-// const without = function(source, itemsToRemove) {
-//   let newArray = source.splice(itemsToRemove);
-//   console.log("new array", newArray);
-// }
 const without = function(source, itemsToRemove) {
   let newArray = [];
   // loop through source 
