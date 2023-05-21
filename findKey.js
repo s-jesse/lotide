@@ -1,14 +1,3 @@
-const assertEqual = require('./assertEqual');
-
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-//     // added in template literals instead of concatenated string
-//   } else if (actual !== expected) {
-//     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
-
 const findKey = function(object, callback) {
   // const keyList = Object.keys(object);
   // console.log("object.key", keyList);
