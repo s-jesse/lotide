@@ -1,13 +1,3 @@
-const assertEqual = require('./assertEqual')
-
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-//   } else if (actual !== expected) {
-//     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
-
 const tail = function(arrTail) {
   //console.log(arr);
   let arrSliced = arrTail.slice(1);
