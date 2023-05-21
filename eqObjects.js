@@ -1,5 +1,7 @@
 //const assertEqual = require('../assertEqual.js');
+// eqArrays require?
 
+// ommit these ?? or are there others???
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
