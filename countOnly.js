@@ -1,14 +1,3 @@
-//const assertEqual = require('./assertEqual')
-
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-//     // added in template literals instead of concatenated string
-//   } else if (actual !== expected) {
-//     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
-
 // allItems: an array of strings that we need to look through
 // itemstoCount: an object specifying what to count
 const countOnly = function(allItems, itemsToCount) {
