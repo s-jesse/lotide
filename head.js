@@ -1,11 +1,3 @@
-const assertEqual = require('./assertEqual')
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-//   } else if (actual !== expected) {
-//     console.log(`❗️❗️❗️ Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
 const head = function(arr1){
   //console.log(arr1); to test if funciton is working 
   let arr = arr1[0];
